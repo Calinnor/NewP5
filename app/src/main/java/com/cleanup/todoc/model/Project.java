@@ -1,5 +1,6 @@
 package com.cleanup.todoc.model;
 
+import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.ColorInt;
@@ -18,6 +19,7 @@ public class Project {
      */
     @PrimaryKey(autoGenerate = true)
     @NonNull
+    @ColumnInfo(name = "id")
     private final long id;
 
     /**
