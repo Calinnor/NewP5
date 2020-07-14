@@ -19,6 +19,10 @@ android {
     lintOptions {
         disable 'RestrictedApi'
     }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 
     /**just below is the code for initialize viewBinding since 4.0.0*/
     buildFeatures{
