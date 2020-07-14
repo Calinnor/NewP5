@@ -19,6 +19,26 @@ android {
     lintOptions {
         disable 'RestrictedApi'
     }
+
+    /**just below is the code for initialize viewBinding since 4.0.0*/
+    buildFeatures{
+        // dataBinding = true
+        // for view binding :
+        viewBinding = true
+    }
+    //viewBinding.enabled = true (here is the original code which is obsolete with gradle 4.0.0)
+    /**Starting from Android Gradle Plugin 4.0.0-alpha05 there is a new block called buildFeatures to enable build features.
+
+     So in order to enable databinding with new AGP plugin we have do like following
+
+     android {
+
+     buildFeatures{
+     dataBinding = true
+     // for view binding :
+     // viewBinding = true
+     }
+     }*/
 }
 
 dependencies {
