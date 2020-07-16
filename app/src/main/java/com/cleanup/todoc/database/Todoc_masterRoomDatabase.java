@@ -34,7 +34,9 @@ public abstract class Todoc_masterRoomDatabase extends RoomDatabase {
                 //then if there is nothing
                 if (INSTANCE==null) {
                     //on crée une data base
-                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(), Todoc_masterRoomDatabase.class, "MyTodoc_masterRoomDatabase").build();
+                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(), Todoc_masterRoomDatabase.class, "MyTodoc_masterRoomDatabase")
+                            .addCallback(prepopulateDatabase())
+                            .build();
                 }
             }
         }
